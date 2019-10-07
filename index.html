@@ -35,6 +35,7 @@
 					### SHMUP = SHoot eM UP
 				</section>
 
+
 				<!-- examples -->
 				<section data-markdown>
 					![](space_invaders.png)
@@ -44,6 +45,62 @@
 				</section>
 				<section data-markdown>
 					![](ikaruga.png)
+				</section>
+
+				<section data-markdown>
+					### Written in C++, uses SDL2
+					- SDL2 is written in C, interfaces with hardware
+						- Create window, draw graphics to screen, handle input
+					- C++ OOP wraps SDL2 structs and functions
+					
+				</section>
+
+
+				<!-- Begin objects and containers section -->
+				<section data-markdown>
+					## Objects and Containers
+				</section>
+
+				<section data-markdown>
+					## Objects (entities)
+					There are 4 entities in the engine:
+					- Enemy Bullets (kills player)
+					- Player Bullets (kills enemies)
+					- Enemies (produce enemy bullets)
+					- Player (produce player bullets)
+				</section>
+
+				<section data-markdown>
+					# DIAGRAM 1
+				</section>
+
+				<section data-markdown>
+					## gameObj Class
+					### Wrapper for SDL_Rect
+					- SDL_Rect is used for collision, position of entity
+					- Everything is a gameObj (player, enemies, bullets)
+					- Access and mutate SDL_Rect position properties
+					- queue and play animations
+				</section>
+
+				<section data-markdown>
+					# DIAGRAM 2 SDL_Rect and additional members
+				</section>
+				<section data-markdown>
+					# DIAGRAM 3 SDL_Rect collision
+				</section>
+
+				<!-- begin containers section -->
+				<section data-markdown>
+					## Containers
+					There are 6 containers in the engine:
+
+					- Texture Map
+					- Base Bullets Map
+					- Base Enemies Map
+					- Current Player Bullets Vector
+					- Current Enemy Bullets Vector
+					- 2D Wave Vector
 				</section>
 
 			</div>
