@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+		<link rel="stylesheet" href="lib/css/vs.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -28,24 +28,48 @@
 
 				<section data-markdown>
 					## Making a Shmup Game Engine
-					#### A System Overview
 				</section>
 
 				<section data-markdown>
 					### SHMUP = SHoot eM UP
+					A "vertical shooter", like Space Invaders.
 				</section>
-
 
 				<!-- examples -->
 				<section data-markdown>
+					Space Invaders
+					<div>
 					![](space_invaders.png)
+					</div>
 				</section>
 				<section data-markdown>
+					Touhou
+					<div>
 					![](touhou.jpg)
+					</div>
 				</section>
 				<section data-markdown>
+					Ikaruga
+					<div>
 					![](ikaruga.png)
+					</div>
 				</section>
+
+				<section data-markdown>
+					### Why make this type of game engine? 
+					This type of game has simple collision and physics.
+					- There is no gravity.
+					- Everything you touch kills you.
+				</section>
+
+				<section data-markdown>
+					### Why make an engine at all? 
+					- Fun and informative
+					- Lessons in managing larger code bases
+					- Lessons in managing a system with OOP
+				</section>
+
+
 
 				<section data-markdown>
 					### Written in C++, uses SDL2
@@ -71,7 +95,7 @@
 				</section>
 
 				<section data-markdown>
-					# DIAGRAM 1
+					![](diagram1.png)
 				</section>
 
 				<section data-markdown>
@@ -84,10 +108,11 @@
 				</section>
 
 				<section data-markdown>
-					# DIAGRAM 2 SDL_Rect and additional members
+					![](diagram2.png)
 				</section>
+
 				<section data-markdown>
-					# DIAGRAM 3 SDL_Rect collision
+					![](diagram3.png)
 				</section>
 
 				<!-- begin containers section -->
