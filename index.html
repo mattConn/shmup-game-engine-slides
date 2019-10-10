@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Making a Shmup Game Engine</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -31,8 +31,7 @@
 				</section>
 
 				<section data-markdown>
-					### SHMUP = SHoot eM UP
-					A "vertical shooter", like Space Invaders.
+					What is a Shmup?
 				</section>
 
 				<!-- examples -->
@@ -55,6 +54,7 @@
 					</div>
 				</section>
 
+				<!-- motivation -->
 				<section data-markdown>
 					### Why make this type of game engine? 
 					This type of game has simple collision and physics.
@@ -79,6 +79,17 @@
 					
 				</section>
 
+
+				<!-- contents -->
+				<section data-markdown>
+					## What I'll Cover
+					- Objects and Containers
+					- Main Routine Overview
+					- Game Loop Overview
+					- Animation/Movement Sequencing
+					- Text-based Configuration/Scripting
+					
+				</section>
 
 				<!-- Begin objects and containers section -->
 				<section data-markdown>
@@ -145,6 +156,66 @@
 				<!-- base objs -->
 				<section data-markdown>
 					![](diagram7.png)
+				</section>
+
+				<section data-markdown>
+					### Diagram8: currentPlayerBullets, currentEnemyBullets
+				</section>
+				<section data-markdown>
+					### Diagram9: enemyWaves
+				</section>
+
+				<!-- Begin Main Routine overview -->
+				<section data-markdown>
+					## Main Routine 
+				</section>
+				<section data-markdown>
+					## diagram10
+				</section>
+
+				<!-- game loop diagrams -->
+				<section data-markdown>
+					## Game Loop 
+				</section>
+				<section data-markdown>
+					## diagram11
+				</section>
+				<section data-markdown>
+					## diagram12
+				</section>
+
+				<!-- animation sequencing  -->
+				<section data-markdown>
+					## Animation/Movement Sequencing 
+				</section>
+
+				<section data-markdown>
+					## Animation Function Pointers
+					- Objects do not own animation definitions.
+					- Objects store function pointers.
+				</section>
+
+				<section data-markdown>
+					## diagram13
+				</section>
+
+				<section data-markdown>
+					## In Code: 
+					```
+					typedef std::vector&lt;bool (*)(gameObj*)&gt; animVector;
+					typedef std::pair&lt;animVector, int&gt; animPair;
+					```
+					then, an animation sequence looks like:
+					```
+					std::vector&lt;animPair&gt; animationSequence;
+					```
+				</section>
+
+				<section data-markdown>
+					Meaning:	
+					```
+					animationSequence = ( {animation function ptr's}, distance to travel )
+					```
 				</section>
 
 			</div>
