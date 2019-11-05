@@ -86,8 +86,6 @@
 					- Objects and Containers
 					- Main Routine Overview
 					- Game Loop Overview
-					- Animation/Movement Sequencing (IP)
-					- Text-based Configuration/Scripting (IP)
 					
 				</section>
 
@@ -179,40 +177,6 @@
 				</section>
 				<section data-markdown style="height: 100%; overflow: scroll;">
 					![](diagram11-12.png)
-				</section>
-
-				<!-- animation sequencing  -->
-				<section data-markdown>
-					## Animation/Movement Sequencing 
-				</section>
-
-				<section data-markdown>
-					## Animation Function Pointers
-					- Objects do not own animation definitions.
-					- Objects store function pointers.
-				</section>
-
-				<section data-markdown>
-					## diagram13
-				</section>
-
-				<section data-markdown>
-					## In Code: 
-					```
-					typedef std::vector&lt;bool (*)(gameObj*)&gt; animVector;
-					typedef std::pair&lt;animVector, int&gt; animPair;
-					```
-					then, an animation sequence looks like:
-					```
-					std::vector&lt;animPair&gt; animationSequence;
-					```
-				</section>
-
-				<section data-markdown>
-					Meaning:	
-					```
-					animationSequence = ( {animation function ptr's}, distance to travel )
-					```
 				</section>
 
 			</div>
